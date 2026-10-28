@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { Calendar, BookOpen, Sparkles, User, BarChart3, TrendingUp, Database } from "lucide-react";
+import { Calendar, BookOpen, Sparkles, User, BarChart3, TrendingUp, Database, Moon, Music, MapPin, Home, Palmtree, Utensils } from "lucide-react";
 
 interface ProjectMockupFrameProps {
-  type: "course-builder" | "healthcare" | "queryhive" | "data-analysis";
+  type: "course-builder" | "healthcare" | "queryhive" | "data-analysis" | "gatherings" | "avadhut";
   title: string;
 }
 
@@ -19,19 +19,163 @@ export function ProjectMockupFrame({ type }: ProjectMockupFrameProps) {
           <span className="w-2.5 h-2.5 rounded-full bg-[#C8DACB] dark:bg-[#577B5B]" />
         </div>
         <div className="px-3 py-0.5 bg-white/80 dark:bg-stone-900/80 rounded-md border border-stone-200/70 dark:border-stone-700/60 text-[10px] text-stone-600 dark:text-stone-300 font-mono tracking-tight max-w-[200px] truncate">
-          {type === "queryhive"
+          {type === "gatherings"
+            ? "gatheringsbyardra.netlify.app"
+            : type === "avadhut"
+            ? "avadhutniwas.netlify.app"
+            : type === "queryhive"
             ? "college-chatbot-v2.vercel.app"
             : type === "healthcare"
             ? "healthcare-portal.local/schedule"
             : type === "data-analysis"
             ? "powerbi.com/reports/clinical-kpi"
-            : "ai-course-builder.app/editor"}
+            : "project.local"}
         </div>
         <div className="w-10" />
       </div>
 
       {/* Frame content based on project */}
       <div className="h-[210px] p-3 text-[11px] overflow-hidden bg-white/70 dark:bg-[#161514]">
+        
+        {type === "gatherings" && (
+          <div className="bg-[#0B1912] border border-[#C5A059]/30 rounded-lg h-full p-2.5 flex flex-col justify-between text-[#ECE3D2] relative overflow-hidden font-serif">
+            {/* Ambient subtle gold radial glow */}
+            <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#C5A059]/15 rounded-full blur-xl pointer-events-none" />
+
+            {/* Top Brand & Venue Bar */}
+            <div className="flex items-center justify-between pb-1.5 border-b border-[#C5A059]/20 font-sans">
+              <div className="flex items-center gap-1.5">
+                <span className="w-5 h-5 rounded-full bg-[#16271E] border border-[#C5A059]/40 text-[#E8C87A] flex items-center justify-center font-bold text-[9px]">
+                  ✦
+                </span>
+                <div className="font-semibold text-[#F3E2B8] text-[11px] tracking-wider uppercase">
+                  Gatherings by Ardra
+                </div>
+              </div>
+              <div className="flex items-center gap-1 text-[8.5px] text-[#E8C87A] bg-[#16271E]/90 px-2 py-0.5 rounded-full border border-[#C5A059]/30">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#E8C87A] animate-pulse" />
+                <span>Live on Netlify</span>
+              </div>
+            </div>
+
+            {/* Central Event Card / Content Preview */}
+            <div className="space-y-1.5 py-1">
+              <div>
+                <div className="flex items-center gap-1 text-[8px] font-sans tracking-widest text-[#C5A059] uppercase font-semibold">
+                  <Moon className="w-2.5 h-2.5 text-[#E8C87A]" />
+                  <span>Samhain 2026 • Sacred Women&apos;s Retreat</span>
+                </div>
+                <div className="text-[12px] font-semibold text-white tracking-wide leading-tight mt-0.5">
+                  A return to what is real, raw &amp; rooted.
+                </div>
+                <div className="text-[8px] text-[#ECE3D2]/80 font-sans flex items-center gap-1 mt-0.5">
+                  <MapPin className="w-2.5 h-2.5 text-[#C5A059]" />
+                  <span>Khaama Kethna Eco Village, South Goa • Oct 30 – Nov 2</span>
+                </div>
+              </div>
+
+              {/* 3 Sacred Archetypes mini-chips */}
+              <div className="grid grid-cols-3 gap-1 pt-0.5 font-sans">
+                <div className="bg-[#12281E]/90 border border-[#C5A059]/25 rounded p-1 text-center">
+                  <div className="text-[7px] text-[#C5A059] uppercase tracking-wider font-semibold">Maiden</div>
+                  <div className="text-[8px] text-white font-medium">Curiosity</div>
+                </div>
+                <div className="bg-[#12281E]/90 border border-[#C5A059]/25 rounded p-1 text-center">
+                  <div className="text-[7px] text-[#C5A059] uppercase tracking-wider font-semibold">Mother</div>
+                  <div className="text-[8px] text-white font-medium">Tenderness</div>
+                </div>
+                <div className="bg-[#12281E]/90 border border-[#C5A059]/25 rounded p-1 text-center">
+                  <div className="text-[7px] text-[#C5A059] uppercase tracking-wider font-semibold">Crone</div>
+                  <div className="text-[8px] text-white font-medium">Wisdom</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom bar: Sacred BGM status & Action */}
+            <div className="flex items-center justify-between pt-1 border-t border-[#C5A059]/20 font-sans text-[8.5px]">
+              <div className="flex items-center gap-1 text-[#C5A059]">
+                <Music className="w-2.5 h-2.5 text-[#E8C87A] animate-pulse" />
+                <span className="font-mono text-[8px] text-[#ECE3D2]">Sacred BGM • Audio Active</span>
+              </div>
+              <span className="bg-gradient-to-r from-[#C5A059] to-[#E8C87A] text-[#0B1912] font-semibold px-2 py-0.5 rounded text-[8.5px] shadow-xs">
+                Book Sanctuary →
+              </span>
+            </div>
+          </div>
+        )}
+
+        
+        {type === "avadhut" && (
+          <div className="bg-[#FAF8F5] dark:bg-[#1E1C1A] border border-amber-900/10 dark:border-amber-500/20 rounded-lg h-full p-2.5 flex flex-col justify-between text-stone-800 dark:text-stone-200 relative overflow-hidden font-sans">
+            {/* Ambient warm coastal glow */}
+            <div className="absolute -top-10 -right-10 w-28 h-28 bg-amber-500/10 dark:bg-amber-600/15 rounded-full blur-xl pointer-events-none" />
+
+            {/* Top Brand Bar */}
+            <div className="flex items-center justify-between pb-1.5 border-b border-stone-200/80 dark:border-stone-800">
+              <div className="flex items-center gap-1.5">
+                <span className="w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 flex items-center justify-center font-bold text-[10px] border border-amber-200 dark:border-amber-800">
+                  <Home className="w-3 h-3 text-amber-700 dark:text-amber-400" />
+                </span>
+                <div>
+                  <div className="font-semibold text-stone-900 dark:text-stone-100 text-[11px] tracking-tight">
+                    Avadhut Niwas
+                  </div>
+                </div>
+                <span className="text-[7.5px] px-1.5 py-0.2 bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 rounded font-medium">
+                  Konkan Coast
+                </span>
+              </div>
+              <div className="flex items-center gap-1 text-[8.5px] text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded-full border border-emerald-100 dark:border-emerald-800">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Live on Netlify</span>
+              </div>
+            </div>
+
+            {/* Central Stay Preview */}
+            <div className="space-y-1.5 py-1">
+              <div>
+                <div className="text-[8px] font-mono tracking-wider text-amber-800 dark:text-amber-400 uppercase font-semibold flex items-center gap-1">
+                  <Palmtree className="w-2.5 h-2.5" />
+                  <span>Rustic Luxury Homestay</span>
+                </div>
+                <div className="text-[12px] font-bold text-stone-900 dark:text-stone-100 tracking-tight leading-snug mt-0.5">
+                  Where Tradition Meets the Coastal Breeze
+                </div>
+                <div className="text-[8.5px] text-stone-600 dark:text-stone-400 line-clamp-1 mt-0.5">
+                  Authentic homemade Malvani delicacies &amp; serene Konkan hospitality
+                </div>
+              </div>
+
+              {/* 3 Room / Experience feature pills */}
+              <div className="grid grid-cols-3 gap-1 pt-0.5 text-center">
+                <div className="bg-white/80 dark:bg-stone-900/80 border border-stone-200/80 dark:border-stone-800 rounded p-1">
+                  <div className="text-[7.5px] text-amber-700 dark:text-amber-400 font-semibold">Alpine Cottage</div>
+                  <div className="text-[8.5px] text-stone-800 dark:text-stone-200 font-medium">AC Suite</div>
+                </div>
+                <div className="bg-white/80 dark:bg-stone-900/80 border border-stone-200/80 dark:border-stone-800 rounded p-1">
+                  <div className="text-[7.5px] text-amber-700 dark:text-amber-400 font-semibold">Garden Room</div>
+                  <div className="text-[8.5px] text-stone-800 dark:text-stone-200 font-medium">Veranda</div>
+                </div>
+                <div className="bg-white/80 dark:bg-stone-900/80 border border-stone-200/80 dark:border-stone-800 rounded p-1">
+                  <div className="text-[7.5px] text-emerald-700 dark:text-emerald-400 font-semibold">360° Tour</div>
+                  <div className="text-[8.5px] text-stone-800 dark:text-stone-200 font-medium">Interactive</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Bar: Cuisine & WhatsApp booking */}
+            <div className="flex items-center justify-between pt-1 border-t border-stone-200/70 dark:border-stone-800 text-[8.5px]">
+              <div className="flex items-center gap-1 text-stone-600 dark:text-stone-400">
+                <Utensils className="w-2.5 h-2.5 text-amber-600 dark:text-amber-400" />
+                <span className="text-[8px] font-medium">Farm to Table Malvani Food</span>
+              </div>
+              <span className="bg-emerald-600 dark:bg-emerald-500 text-white font-medium px-2 py-0.5 rounded text-[8.5px] shadow-xs flex items-center gap-1">
+                WhatsApp Booking →
+              </span>
+            </div>
+          </div>
+        )}
+
         {type === "course-builder" && (
           <div className="grid grid-cols-12 gap-2.5 h-full">
             {/* Sidebar */}

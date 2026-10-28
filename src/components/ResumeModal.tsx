@@ -172,11 +172,42 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               </div>
 
               <div>
-                <div className="font-semibold text-xs text-stone-900 dark:text-stone-100 print:text-black">
-                  Healthcare System
+                <div className="flex justify-between items-baseline">
+                  <div className="font-semibold text-xs text-stone-900 dark:text-stone-100 print:text-black">
+                    Gatherings by Ardra
+                  </div>
+                  <a
+                    href="https://gatheringsbyardra.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[11px] text-stone-600 dark:text-stone-400 print:text-stone-600 font-mono hover:underline inline-flex items-center gap-1"
+                  >
+                    gatheringsbyardra.netlify.app
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
                 </div>
                 <p className="text-xs text-stone-700 dark:text-stone-300 print:text-black mt-1">
-                  Designed and developed a comprehensive web-based healthcare management application using Next.js, Node.js, and MySQL. Features include secure patient record management, streamlined appointment scheduling, and an AI-driven chatbot for general medical inquiries and system navigation.
+                  Designed and developed an immersive retreat reservation platform and high-conversion web experience featuring custom typography, interactive archetype showcases, ambient background audio controls, and responsive booking flows.
+                </p>
+              </div>
+
+              <div>
+                <div className="flex justify-between items-baseline">
+                  <div className="font-semibold text-xs text-stone-900 dark:text-stone-100 print:text-black">
+                    Avadhut Niwas Homestay
+                  </div>
+                  <a
+                    href="https://avadhutniwas.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[11px] text-stone-600 dark:text-stone-400 print:text-stone-600 font-mono hover:underline inline-flex items-center gap-1"
+                  >
+                    avadhutniwas.netlify.app
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
+                </div>
+                <p className="text-xs text-stone-700 dark:text-stone-300 print:text-black mt-1">
+                  Engineered a responsive rustic luxury hospitality platform featuring interactive 360° virtual property tours, accommodation booking catalogs, authentic Malvani dining showcase, and direct WhatsApp reservation flows.
                 </p>
               </div>
 

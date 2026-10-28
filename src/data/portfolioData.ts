@@ -11,7 +11,7 @@ export interface Project {
   githubUrl?: string;
   publication?: string;
   features: string[];
-  previewType: 'course-builder' | 'healthcare' | 'queryhive' | 'data-analysis';
+  previewType: 'course-builder' | 'healthcare' | 'queryhive' | 'data-analysis' | 'gatherings' | 'avadhut';
 }
 
 export interface Service {
@@ -59,51 +59,56 @@ export const portfolioData = {
     workTypes: ["Full-Time Roles", "Freelance Projects", "Contract Engineering"],
   },
 
-  projects: [
+    projects: [
     {
-      id: "ai-course-builder",
-      title: "AI Course Builder",
+      id: "gatherings-by-ardra",
+      title: "Gatherings by Ardra",
       shortDescription:
-        "An AI-powered platform to create and manage courses with chapters, lessons, videos, and quizzes.",
+        "An immersive retreat reservation platform and high-conversion web experience designed for sacred gatherings, featuring rich botanical aesthetics, interactive archetypes, and seamless booking.",
       fullDescription:
-        "A full-stack instructional architecture that harnesses generative AI models to automatically draft end-to-end curriculum syllabi, structured lesson content, and comprehensive assessments based on user prompt criteria.",
+        "A bespoke event platform and reservation experience engineered for Gatherings by Ardra (Samhain 2026 Sacred Women's Retreat in South Goa). Features an atmospheric botanical witch aesthetic, custom typography, an automated archetype carousel, interactive itinerary modules, ambient background music controls, and responsive lead capture flows.",
       problem:
-        "Educators and content creators spend dozens of hours manually structuring course outlines, formulating quiz questions, and formatting lesson modules.",
+        "Experiential retreats need a digital presence that conveys their sacred, untamed atmosphere while maintaining high performance, intuitive navigation, and high-converting reservation workflows across devices.",
       solution:
-        "Built a modular web platform utilizing Next.js 15, React 19, and Google Gemini API with tRPC for end-to-end type safety, generating interactive multi-chapter courses in seconds.",
-      tags: ["Next.js 15", "React 19", "Gemini API", "tRPC"],
-      category: "AI & Chatbot",
-      githubUrl: "https://github.com/swaraj07ui",
-      features: [
-        "Automated curriculum chapter & lesson breakdown",
-        "Context-aware quiz generation with instant evaluation",
-        "Type-safe API layer with tRPC and responsive dashboard",
-        "Video and rich content resource embedding",
-      ],
-      previewType: "course-builder",
-    },
-    {
-      id: "healthcare-system",
-      title: "Healthcare System",
-      shortDescription:
-        "A web-based healthcare management system with patient records, appointment scheduling, and an AI chatbot.",
-      fullDescription:
-        "An enterprise clinical operations portal designed to streamline clinic workflows, maintain structured patient EHR records, schedule consultations, and provide patient triage through a conversational AI assistant.",
-      problem:
-        "Clinics struggle with fragmented patient records, double-booked appointments, and high front-desk inquiry volumes.",
-      solution:
-        "Engineered a unified patient portal using Next.js, Node.js, and MySQL with role-based authentication, interactive appointment calendars, and an integrated medical triage assistant.",
-      tags: ["Next.js", "Node.js", "MySQL", "Healthcare EHR"],
+        "Crafted a responsive web application featuring custom serif typography, dynamic dark botanical styling, an automated archetype carousel, embedded ambient audio experience with smooth fade-in, and responsive reservation enquiry flows deployed on Netlify.",
+      tags: ["Full-Stack Web", "Responsive Design", "Interactive UI", "Audio API", "Netlify"],
       category: "Full-Stack",
+      liveUrl: "https://gatheringsbyardra.netlify.app/",
       githubUrl: "https://github.com/swaraj07ui",
       features: [
-        "Patient electronic health record (EHR) management",
-        "Interactive calendar appointment scheduler",
-        "24/7 AI-driven chatbot for patient triage & facility navigation",
-        "Doctor prescription notes and consultation logs",
+        "Live on Netlify: https://gatheringsbyardra.netlify.app/",
+        "Atmospheric botanical witch aesthetic with custom Cinzel & Cormorant typography",
+        "Interactive Archetype showcase (Maiden, Mother, Crone) with auto-transition",
+        "Sacred ambient background music (BGM) player with interactive volume fading",
+        "Complete retreat itinerary, sanctuary accommodations & occupancy reservation flows",
       ],
-      previewType: "healthcare",
+      previewType: "gatherings",
     },
+    {
+      id: "avadhut-niwas",
+      title: "Avadhut Niwas Homestay",
+      shortDescription:
+        "A boutique rustic luxury homestay and direct reservation web platform showcasing Konkan heritage, authentic Malvani dining, and 360° virtual tours.",
+      fullDescription:
+        "A responsive hospitality and booking portal engineered for Avadhut Niwas, a rustic luxury homestay nestled on the Konkan coast. Features interactive accommodation catalogs (Garden Room, Alpine Cottage, Royal Suite), immersive 360° virtual property tours, a farm-to-table Malvani culinary showcase, and direct WhatsApp-integrated reservation workflows.",
+      problem:
+        "Independent coastal homestays frequently rely on third-party aggregator portals that take hefty commissions and fail to capture the authentic warmth, culinary tradition, and physical ambience of the stay.",
+      solution:
+        "Engineered a dedicated high-converting web platform featuring warm coastal typography, interactive 360° room walkthroughs, rich image galleries, and instant WhatsApp booking inquiries that significantly reduce booking friction.",
+      tags: ["Full-Stack Web", "Tailwind CSS", "360° Virtual Tour", "WhatsApp API", "Netlify"],
+      category: "Full-Stack",
+      liveUrl: "https://avadhutniwas.netlify.app/",
+      githubUrl: "https://github.com/swaraj07ui",
+      features: [
+        "Live on Netlify: https://avadhutniwas.netlify.app/",
+        "Interactive 360° virtual property & cottage walkthroughs",
+        "Accommodation catalog with Garden Rooms, Alpine Cottages, and Royal Suites",
+        "Authentic Farm-to-Table Malvani & Konkani culinary showcase",
+        "Direct-to-WhatsApp booking and instant reservation inquiry engine",
+      ],
+      previewType: "avadhut",
+    },
+
     {
       id: "queryhive-assistant",
       title: "QueryHive Assistant Platform",
@@ -127,28 +132,6 @@ export const portfolioData = {
         "Optimized prompt context window for collegiate knowledge retrieval",
       ],
       previewType: "queryhive",
-    },
-    {
-      id: "clinical-sales-analytics",
-      title: "Healthcare & Operations Analytics",
-      shortDescription:
-        "An end-to-end data pipeline and executive BI dashboard analyzing patient throughput, clinical KPIs, and operational costs.",
-      fullDescription:
-        "An applied data analytics case study combining Python (Pandas, NumPy) for data wrangling, SQL for multi-table aggregation and cohort analysis, and Power BI for executive dashboard reporting. Transformed 50,000+ raw operational records into actionable business intelligence with automated KPI scorecards, department throughput trends, and resource utilization insights.",
-      problem:
-        "Hospital management struggled with siloed records across legacy spreadsheets, making it difficult to detect bed occupancy bottlenecks, wait-time spikes, and department expenditure variances.",
-      solution:
-        "Engineered an automated ETL pipeline with Python and SQL to clean and aggregate records, and deployed an interactive Power BI dashboard featuring dynamic slicers, KPI scorecards, and visual variance reporting.",
-      tags: ["Python", "SQL", "Power BI", "Excel", "EDA"],
-      category: "Data Analysis",
-      githubUrl: "https://github.com/swaraj07ui",
-      features: [
-        "Automated data cleaning & outlier detection across 50,000+ records via Python Pandas",
-        "Complex SQL queries utilizing CTEs, window functions, and relational joins",
-        "Interactive Power BI dashboard with dynamic date, department, and demographic slicers",
-        "Executive KPI scorecards tracking patient throughput, bed occupancy, and cost metrics",
-      ],
-      previewType: "data-analysis",
     },
   ] as Project[],
 

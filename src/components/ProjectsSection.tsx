@@ -16,7 +16,7 @@ export function ProjectsSection() {
   const [canScrollRight, setCanScrollRight] = useState<boolean>(true);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const categories = ["All", "AI & Chatbot", "Full-Stack", "Data Analysis"];
+  const categories = ["All", "AI & Chatbot", "Full-Stack"];
 
   const filteredProjects =
     filter === "All"
@@ -293,7 +293,7 @@ export function ProjectsSection() {
           {/* Slide hint / Mobile controls */}
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-mono text-stone-500 dark:text-stone-400 hidden md:inline">
-              Slide or swipe to explore ({filteredProjects.length} projects)
+              Slide or swipe to explore ({filteredProjects.length} {filteredProjects.length === 1 ? "project" : "projects"})
             </span>
 
             {/* Mobile Prev / Next arrows */}
